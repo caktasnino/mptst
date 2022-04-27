@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{{ asset('img/tp.png') }}">
+    <title>Tap-Ping - Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <img src="{{ asset('img/tp.png') }}">
+    <div class="center">
+        <h1>Register</h1>
+        <form method="post" action="{{ route('register') }}">
+                <div class="txt_field">
+                    <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="user" required autocomplete="username" autofocus>
+                    <label>Username</label>
+                </div>
+                <div class="txt_field">
+                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="user@email.com" required autocomplete="email">
+                    <label>Email</label>
+                </div>
+                <div class="txt_field">
+                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" value="12345678" name="password" required autocomplete="new-password">
+                    <label>Password</label>
+                </div>
+                <div class="txt_field">
+                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" value="12345678" required autocomplete="new-password">
+                    <label>Confirm Password</label>
+                </div>
+                <button type="submit" class="btn">
+                    <a style="text-decoration: none; color: white;" href="app.html">Register</a>
+                </button>
+                <div class="signup_link">
+                        Already a member? <a href="login.html">Sign In</a>
+                </div>
+        </form>
+    </div>
+</body>
+</html>

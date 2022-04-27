@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{{ asset('img/tp.png') }}">
+    <title>Tap-Ping - Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <img src="img/tp.png">
+    <div class="center">
+        <h1>Login</h1>
+        <form method="post" action="{{ route('login') }}">
+            <div class="cred">
+                    <div class="txt_field">
+                        <input id="email" type="email" name="email" value="user@email.com" required autocomplete="email" autofocus>
+                        <label>Email</label>
+                    </div>
+                    <div class="txt_field">
+                        <input id="password" type="password" name="password" value="12345678" required autocomplete="current-password">
+                        <label>Password</label>
+                    </div>
+                    <div class="remember">
+                        <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                        <label for="remember">
+                            Remember Me
+                        </label>
+                    </div>
+                    <div class="pass">
+                            <a href="#">
+                                Forgot Your Password?
+                            </a>
+                    </div>
+                    <div class="btn">
+                        <button type="submit">
+                            <a style="text-decoration: none; color: white;" href="app.html">Login</a>
+                        </button>
+                    </div>
+                    <div class="signup_link">
+                        Not a member? <a href="register.html">Sign Up</a>
+                    </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

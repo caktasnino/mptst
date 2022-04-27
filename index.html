@@ -1,62 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="header">
-        <h1>Home</h1>
-        <div class="icons">
-            <i class='bx bx-search'></i>
-            <i class='bx bx-menu'></i>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="index.css">
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="icon" type="image/x-icon" href="{{ asset('img/tp.png') }}">
+        <title>Tap-Ping</title>
+    </head>
+    <body>
+        <div class="logo">
+            <img src="img/tp.png">
         </div>
-    </div>
-    <div class="card">
-        <div>
-            <p>Your online identity</p>
-            <h1 class="strong">Customize your profile</h1>
-            <a href="#"><i class='bx bxs-edit' ></i>Edit</a>
+        <div class="content">
+            <h1>Get Started</h1>
+            <p>Start with signing up or signing in,<br> or visit our Store.</p>
         </div>
-        <i class='bx bx-fingerprint'></i>
-    </div>
-    <div class="content">
-        <h1>Links</h1>
-        <table>
-            <tbody>
-                <tr>
-                    <td><span class="icon youtube"><i class='bx bxl-youtube'></span></i><span class="text">Youtube</span></td>
-                </tr>
-                <tr>
-                    <td><span class="icon instagram"><i class='bx bxl-instagram'></span></i><span class="text">Instagram</span></td>
-                </tr>
-                <tr>
-                    <td><span class="icon facebook"><i class='bx bxl-facebook'></span></i><span class="text">Facebook</span></td>
-                </tr>
-                <tr>
-                    <td><span class="icon twitter"><i class='bx bxl-twitter'></span></i><span class="text">Twitter</span></td>
-                </tr>
-                <tr>
-                    <td><span class="icon altlink"><i class='bx bx-link-alt'></span></i><span class="text">GitHub</span></td>
-                </tr>
-                
-            </tbody>
-        </table>
-        <div class="btn"><a href="#"><i class='bx bx-plus'></i>Add Link</a></div>
-    </div>
-    <div class="navigation">
-        <ul>
-            <li>
-                <a style="opacity: 1; border-bottom: 2px solid #3386fe;" href="#"><i class='bx bx-home-alt' ></i></a>
-                <a href="#"><i class='bx bx-bar-chart-square' ></i></a>
-                <a href="#"><i class='bx bx-user' ></i></a>
-                <a style="margin-right: 0;" href="#"><i class='bx bx-cart-alt' ></i></a>
-            </li>
-        </ul>
-    </div>
-</body>
+        <div class="btn">
+                    <a href="login.html"><button id="login"><i class='bx bx-log-in'></i>Sign In</button></a>
+                    <a href="register.html"><button id="register"><i class='bx bx-plus'></i>Sign Up</button></a>
+            <a href="#"><button id="shop"><i class='bx bx-cart-alt'></i>Shop</button></a>
+        </div>
+    </body>
 </html>
